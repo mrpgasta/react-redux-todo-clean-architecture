@@ -1,0 +1,146 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: #cdcdff;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: rgb(47, 32, 185);
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #5d0cff;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: rgb(10, 4, 36);
+}
+
+.todo-input::placeholder {
+  color: #ffffff;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid rgb(7, 39, 180) 0%;
+}
+
+.todo-button.save {
+    background: linear-gradient(
+      90deg,
+      rgb(7, 39, 180) 0%,
+      rgb(45, 7, 180) 0%
+    );
+    padding: 16px 22px;
+  }
+
+.todo-button.edit {
+  background:rgb(43, 2, 228) ;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 16px 22px;
+}
+
+.todo-button.delete {
+    background:rgb(8, 14, 41) ;
+    margin-left: 2px;
+    margin-right: 20px;
+    padding: 16px 22px;
+  }
+
+.todo-button.cancel {
+    background: linear-gradient(
+      90deg,
+      rgb(99, 32, 255) 0%,
+      rgb(232, 141, 255) 100%
+    );
+    padding: 16px 22px;
+    /* margin-left: 50px;
+    padding: 16px 22px; */
+  }
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgb(7, 39, 180) 0%,
+    rgb(40, 9, 124) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+
+.todo-edit {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    margin: 4px auto;
+    color: rgb(255, 255, 255);
+    background:rgb(255, 8, 144);
+  
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+  }
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
