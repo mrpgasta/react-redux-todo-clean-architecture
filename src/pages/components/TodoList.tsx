@@ -9,7 +9,7 @@ const TodoList = ({ todo }) => {
     const [newTitle, setNewTitle] = useState(todo.title);
     const [onEdit, setOnEdit] = useState(false);
 
-    const handleUpdate = () => {
+    const handleUpdate = (todo) => {
         const updatedTodo = {
             id: todo.id,
             title: newTitle,

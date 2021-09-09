@@ -3,6 +3,11 @@ import { nanoid } from "@reduxjs/toolkit";
 import { useAppSelector, useAppDispatch } from "app/redux/hooks";
 import { createTodo, GetTodo } from "app/redux/todo/todo.slice";
 import TodoList from './TodoList';
+import Todo from 'domain/entities/Todo';
+
+type state = {
+    title: string;
+};
 
 
 const TodoForm = () => {
@@ -21,7 +26,7 @@ const TodoForm = () => {
         const todo = {
             id: nanoid(),
             title,
-            isDone: false
+            done: false
         };
 
         dispatch(createTodo(todo))
@@ -32,14 +37,14 @@ const TodoForm = () => {
     return (
         <div>
             <form className='todo-form'>
-                <label value={title} onChange={e => setTitle(e.target.value)}>
-                    <input className='todo-input edit' placeholder='Enter Task'/>
+                <label>
+                    <input value={title} onChange={e => setTitle(e.target.value)} className='todo-input edit' placeholder='Enter Task'/>
                     <button onClick={onClick} className='todo-button save' >Submit</button>
                 </label>
             </form>
 
             <div className="table">
-                {todos.map((todo) => (
+                {todos.map((todo: Todo) => (
                     <TodoList key={todo.id} todo={todo} />
                 ))}
             </div>
